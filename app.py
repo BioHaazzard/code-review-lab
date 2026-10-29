@@ -1,13 +1,11 @@
-"""Simple statistics helpers used in the code-review lab."""
-
-import os
+"""Statistics helpers used in the code-review lab."""
 
 
 def calculate_average(numbers):
-    total = 0
-    for i in range(len(numbers)):
-        total = total + numbers[i]
-    return total / len(numbers)
+    """Return the arithmetic mean of a non-empty sequence of numbers."""
+    if not numbers:
+        raise ValueError("numbers must not be empty")
+    return sum(numbers) / len(numbers)
 
 
 def main():
